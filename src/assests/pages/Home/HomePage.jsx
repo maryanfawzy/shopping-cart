@@ -1,12 +1,10 @@
 import React from 'react'
 
-
-
 const HomePage = () => {
   return (
-    <main>
+    <div>
       home
-    </main>
+    </div>
   )
 }
 
