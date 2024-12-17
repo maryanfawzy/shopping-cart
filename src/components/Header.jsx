@@ -14,11 +14,16 @@ const Header = () => {
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Shopping</span>
         </a>
         <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <span className=' cursor-pointer mr-5 text-gray-700 dark:text-white  bi bi-gear-fill'></span>
-            <span className='  cursor-pointer mr-5 text-gray-700 dark:text-white bi bi-search'></span>
-       <a href= '/cart' className=' text-gray-700 dark:text-white mr-5'></a>
-            <span className=' cursor-pointer text-gray-700 mr-5 dark:text-white bi bi-cart-fill'></span>
-            <span className='cursor-pointer mr-5 text-gray-700 dark:text-white  bi bi-person-fill'> </span>
+          
+
+            <span class="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-gear-wide-connected"></span>
+                    <span class="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search"></span>
+                    <a href="/cart" class="text-gray-700 dark:text-white mr-5">
+                    <span class="text-2xl bi bi-cart-fill relative">
+                        <span class="text-white text-sm absolute -top-1 left-2.5 bg-rose-500 px-1 rounded-full ">0</span>
+                    </span>                    
+                    </a>
+                    <span class="bi bi-person-circle cursor-pointer text-2xl text-gray-700 dark:text-white"></span>
            
         </div>
     </div>
