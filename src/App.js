@@ -34,14 +34,16 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ProductList from '../src/assests/pages/Products/ProductList'
 import { ProductDetail } from './assests/pages/ProductDedtail';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
 return (
 
 <Router>
+    <ScrollToTop/>
 
-<div className="App">
+<div className="App dark:bg-slate-800">
 
 <Header />
 

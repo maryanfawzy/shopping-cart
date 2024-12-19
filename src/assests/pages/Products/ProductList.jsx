@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react"
 import { ProductCard } from "../../../components/ProductCard"
 import { FilterBar } from "./component/FilterBar"
+import { useLocation } from "react-router-dom"
 
  const ProductsList = () => {
   const [show, setShow] = useState(false)
   const [products, setProducts] = useState([])
+  const search = useLocation().search
+  const searchTearm = new URLSearchParams(search).get("q")
+  console.log(searchTearm)
   useEffect(()=>{ 
     async function fetchProducts(){
-      const response = await fetch("http://localhost:8000/products")
+      const response = await fetch(`http://localhost:8000/products?name_like=${searchTearm ?searchTearm : '' }`)
       const data = await response.json()
       setProducts(data)
     }
