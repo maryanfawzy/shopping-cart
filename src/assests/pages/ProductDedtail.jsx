@@ -1,3 +1,5 @@
+import Rating from "../../components/Rating"
+
 export const ProductDetail = () => {
     return (
       <main>
@@ -14,13 +16,7 @@ export const ProductDetail = () => {
                   <span className="">29</span>
                 </p>
                 <p className="my-3"> 
-                  <span>
-                    <i className="text-lg bi bi-star-fill text-yellow-500 mr-1"></i>
-                    <i className="text-lg bi bi-star-fill text-yellow-500 mr-1"></i>
-                    <i className="text-lg bi bi-star-fill text-yellow-500 mr-1"></i>
-                    <i className="text-lg bi bi-star-fill text-yellow-500 mr-1"></i>
-                    <i className="text-lg bi bi-star text-yellow-500 mr-1"></i>
-                  </span>
+                <Rating/>
                 </p>
                 <p className="my-4 select-none">
                   <span className="font-semibold text-amber-500 border bg-amber-50 rounded-lg px-3 py-1 mr-2">BEST SELLER</span>   

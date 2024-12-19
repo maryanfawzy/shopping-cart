@@ -33,6 +33,7 @@ import Header from './components/Header';
 
 import Footer from './components/Footer';
 import ProductList from '../src/assests/pages/Products/ProductList'
+import { ProductDetail } from './assests/pages/ProductDedtail';
 
 function App() {
 
@@ -49,6 +50,8 @@ return (
 <Route path="/" element={<HomePage />} />
 
  <Route path="/product" element={<ProductList />} /> 
+ <Route path='/products/:id' element = {<ProductDetail/>} /> 
+
 
 </Routes>
 
