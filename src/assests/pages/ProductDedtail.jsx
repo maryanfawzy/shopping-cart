@@ -8,6 +8,7 @@ export const ProductDetail = () => {
   useEffect(()=>{
   async function fetchData(){
     const response = await fetch(`http://localhost:8000/products/${id}`)
+    console.log(response)
     const data = await response.json()
     setProduct(data)
   }
@@ -18,7 +19,7 @@ export const ProductDetail = () => {
     return (
       <main>
           <section>
-            <h1 className="mt-10 mb-5 text-4xl text-center font-bold text-gray-900 dark:text-slate-200">The {product.name}</h1>
+            <h1 className="mt-10 mb-5 text-4xl text-center font-bold text-gray-900 dark:text-slate-200"> {product.title}</h1>
             <p className="mb-5 text-lg text-center text-gray-900 dark:text-slate-200">{product.overview}.</p>
             <div className="flex flex-wrap justify-around">
               <div className="max-w-xl my-3">
