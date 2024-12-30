@@ -8,7 +8,7 @@ export const ProductDetail = () => {
   useEffect(()=>{
   async function fetchData(){
     // const response = await fetch(`http://localhost:8000/products/${id}`)
-    const response = await fetch(`https://api.jikan.moe/v4/manga/3`)
+    const response = await fetch(`https://api.jikan.moe/v4/manga`)
     console.log(response)
     const data = await response.json()
     setProduct(data)
@@ -16,15 +16,18 @@ export const ProductDetail = () => {
   fetchData()
     
   },[id])
+  
+  
+  
 
     return (
       <main>
           <section>
-            <h1 className="mt-10 mb-5 text-4xl text-center font-bold text-gray-900 dark:text-slate-200"> {product.title}</h1>
-            <p className="mb-5 text-lg text-center text-gray-900 dark:text-slate-200">{product.overview}.</p>
+            <h1 className="mt-10 mb-5 text-4xl text-center font-bold text-gray-900 dark:text-slate-200"> ''</h1>
+            <p className="mb-5 text-lg text-center text-gray-900 dark:text-slate-200">{}.</p>
             <div className="flex flex-wrap justify-around">
               <div className="max-w-xl my-3">
-                <img className="rounded" src={product.poster}alt="" />
+                <img className="rounded" src="" alt="" />
               </div>
               <div className="max-w-xl my-3">
                 <p className="text-3xl font-bold text-gray-900 dark:text-slate-200">

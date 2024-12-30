@@ -45,7 +45,7 @@ const FeaturedProduct = () => {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch(`https://api.jikan.moe/v4/manga/{id}`);
+        const response = await fetch(`https://api.jikan.moe/v4/manga`);
         const result = await response.json();
         
         setProduct(result.data);
