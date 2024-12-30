@@ -59,3 +59,6 @@ export const ProductDetail = () => {
         </main> 
     )
   }
+
+
+
