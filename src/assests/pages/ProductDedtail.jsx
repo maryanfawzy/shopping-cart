@@ -7,7 +7,8 @@ export const ProductDetail = () => {
   const {id} = useParams()
   useEffect(()=>{
   async function fetchData(){
-    const response = await fetch(`http://localhost:8000/products/${id}`)
+    // const response = await fetch(`http://localhost:8000/products/${id}`)
+    const response = await fetch(`https://api.jikan.moe/v4/manga/3`)
     console.log(response)
     const data = await response.json()
     setProduct(data)

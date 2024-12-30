@@ -5,7 +5,8 @@ const FeaturedProduct = () => {
   const [product, setProduct] = useState([])
   useEffect(()=>{
     async function fetchProducts(){
-      const response = await fetch('http://localhost:8000/featured_products')
+      const response = await fetch('https://api.jikan.moe/v4/manga/3')
+      // const response = await fetch("http://localhost:8000/featured_products")
       const data = await response.json()
       setProduct(data)
 

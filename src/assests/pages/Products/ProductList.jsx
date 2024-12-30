@@ -11,7 +11,8 @@ import { useLocation } from "react-router-dom"
   console.log(searchTearm)
   useEffect(()=>{ 
     async function fetchProducts(){
-      const response = await fetch(`http://localhost:8000/products?name_like=${searchTearm ? searchTearm : '' }`)
+      // const response = await fetch(`http://localhost:8000/products?name_like=${searchTearm ? searchTearm : '' }`)
+      const response = await fetch(`https://api.jikan.moe/v4/manga/3`)
       const data = await response.json()
       setProducts(data)
     }
