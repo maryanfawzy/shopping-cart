@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import Rating from "../../components/Rating"
 import { useParams } from "react-router-dom";
+import ProductCard from "../../components/ProductCard";
+
 
 export const ProductDetail = () => {
   const [product, setProduct] = useState({});
@@ -8,34 +10,39 @@ export const ProductDetail = () => {
   useEffect(()=>{
   async function fetchData(){
     // const response = await fetch(`http://localhost:8000/products/${id}`)
-    const response = await fetch(`https://api.jikan.moe/v4/manga/`)
-    console.log(response)
-    const data = await response.json()
-    setProduct(data)
+    const response = await fetch(`https://api.jikan.moe/v4/manga`);
+
+    const result = await response.json();
+    
+    
   }
   fetchData()
     
   },[id])
-  
-  
+
+   
+
+
   
 
     return (
       <main>
           <section>
             <h1 className="mt-10 mb-5 text-4xl text-center font-bold text-gray-900 dark:text-slate-200"> </h1>
-            <p className="mb-5 text-lg text-center text-gray-900 dark:text-slate-200">{}.</p>
+            <p className="mb-5 text-lg text-center text-gray-900 dark:text-slate-200">{product.poster}.</p>
             <div className="flex flex-wrap justify-around">
               <div className="max-w-xl my-3">
-                <img className="rounded" src="" alt="" />
+                <img className="rounded" src={product.poster} alt="" />
               </div>
               <div className="max-w-xl my-3">
                 <p className="text-3xl font-bold text-gray-900 dark:text-slate-200">
                   <span className="mr-1">$</span>
-                  <span className="">{product.price}</span>
+                  <span className="">50</span>
                 </p>
                 <p className="my-3"> 
-                  <Rating rating={product.rating}/>
+                
+                <Rating rating={product.rating} />
+
 
                
                 </p>

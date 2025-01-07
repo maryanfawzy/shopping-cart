@@ -164,7 +164,7 @@ const FeaturedProduct = () => {
     fetchProducts();
   }, []);
 
-  if (isLoading) {
+   {if (isLoading)
     return (
       <div className="text-center my-20 dark:text-slate-100">
         <div className="animate-pulse">Loading featured products...</div>
